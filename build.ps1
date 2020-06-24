@@ -139,7 +139,7 @@ Function CheckModuleVersion()
         [Parameter(Mandatory=$True,Position=1)] $ExpectedVersion
     )
     
-    Import-Module $ModuleName 4> $null
+    #Import-Module $ModuleName 4> $null
     $Module = Get-Module -Name $ModuleName
     if ($Module.Count -eq 0)
     {
@@ -2380,8 +2380,8 @@ $script:SimulationBuildOutputStartScript = "$script:SimulationBuildOutputPath/st
 $script:SimulationBuildOutputStopScript = "$script:SimulationBuildOutputPath/stopsimulation"
 $script:SimulationConfigPath = "$script:SimulationBuildOutputPath/Config"
 
-CheckModuleVersion PSCX $EXPECTED_PSCX_MODULE_VERSION
-CheckModuleVersion Posh-SSH $EXPECTED_POSHSSH_MODULE_VERSION
+#CheckModuleVersion PSCX $EXPECTED_PSCX_MODULE_VERSION
+#CheckModuleVersion Posh-SSH $EXPECTED_POSHSSH_MODULE_VERSION
 
 # Validate command line semantic
 if ($script:Command -eq "cloud" -or $script:Command -eq "delete" -and $script:DeploymentName -eq "local")
