@@ -821,10 +821,10 @@
     },
     {
       "Guid": "17BB3DAB-C22A-4115-8BFE-038B9A5BC04C",
-      "Name": "Seattle",
-      "Description": "Bearings",
+      "Name": "CTR Fasteners",
+      "Description": "Fasteners",
       "Location": {
-        "City": "Seattle",
+        "City": "Indianpolis",
         "Country": "United States",
         "Latitude": 47.60357,
         "Longitude": -122.3295
@@ -833,8 +833,8 @@
       "ProductionLines": [
         {
           "Guid": "103A4B41-AFAE-4B5E-BAA0-18FF3FCCCB3B",
-          "Name": "Production Line 1",
-          "Description": "Needle bearing",
+          "Name": "Forming Line1",
+          "Description": "Wire Processing",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -847,8 +847,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Needle bearing assembly station",
+              "Name": "Pickling",
+              "Description": "Pickling station",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -930,8 +930,8 @@
               ]
             },
             {
-              "Name": "Test #1",
-              "Description": "Needle bearing test station",
+              "Name": "Annealing",
+              "Description": "Annealing station",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -1006,8 +1006,8 @@
               ]
             },
             {
-              "Name": "Packaging",
-              "Description": "Needle bearing packaging station",
+              "Name": "Coating",
+              "Description": "Coating station",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
