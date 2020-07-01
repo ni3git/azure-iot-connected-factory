@@ -3,13 +3,13 @@
   "Factories": [
     {
       "Guid": "73B534AE-7C7E-4877-B826-F1C0EA339F65",
-      "Name": "Munich",
+      "Name": "St. Louis Drawn, Inc",
       "Description": "Braking system",
       "Location": {
-        "City": "Munich",
-        "Country": "Germany",
-        "Latitude": 48.13641,
-        "Longitude": 11.57754
+        "City": "St. Louis",
+        "Country": "United States",
+        "Latitude": 38.766597,
+        "Longitude": -90.200506
       },
       "Image": "factory.png",
       "ProductionLines": [
@@ -287,13 +287,13 @@
     },
     {
       "Guid": "CB1DBFA0-F520-46E1-85E1-97DCD67860D0",
-      "Name": "Cape Town",
+      "Name": "Nucor LMP, INC",
       "Description": "Fuel supply system",
       "Location": {
-        "City": "Cape Town",
-        "Country": "South Africa",
-        "Latitude": -33.91909,
-        "Longitude": 18.42199
+        "City": "Kansas",
+        "Country": "United States",
+        "Latitude": 40.345883,
+        "Longitude": -94.849709
       },
       "Image": "factory.png",
       "ProductionLines": [
@@ -554,13 +554,13 @@
     },
     {
       "Guid": "9DEB6B9C-2358-464F-BE06-86F22E4D66B7",
-      "Name": "Mumbai",
+      "Name": "Nucor Cold Finish Nebraska",
       "Description": "Exhaust system",
       "Location": {
-        "City": "Mumbai",
-        "Country": "India",
-        "Latitude": 18.93016,
-        "Longitude": 72.83028
+        "City": "Nebraska",
+        "Country": "United States",
+        "Latitude": 42.017826,
+        "Longitude": -97.442365
       },
       "Image": "factory.png",
       "ProductionLines": [
@@ -821,13 +821,13 @@
     },
     {
       "Guid": "17BB3DAB-C22A-4115-8BFE-038B9A5BC04C",
-      "Name": "CTR Fasteners",
+      "Name": "Nucor Cold Finish Utah",
       "Description": "Fasteners",
       "Location": {
-        "City": "Indianpolis",
+        "City": "Utah",
         "Country": "United States",
-        "Latitude": 47.60357,
-        "Longitude": -122.3295
+        "Latitude": 41.534942,
+        "Longitude": -122.062487
       },
       "Image": "factory.png",
       "ProductionLines": [
@@ -1088,13 +1088,13 @@
     },
     {
       "Guid": "DA530CC7-AF95-45B3-9322-75E48A375A65",
-      "Name": "Beijing",
+      "Name": "Nucor Cold Finish Wisconsin",
       "Description": "Air conditioning system",
       "Location": {
-        "City": "Beijing",
-        "Country": "China",
-        "Latitude": 39.90657,
-        "Longitude": 116.3876
+        "City": "Wisconsin",
+        "Country": "United Stated",
+        "Latitude": 42.914476,
+        "Longitude": -87.920231
       },
       "Image": "factory.png",
       "ProductionLines": [
@@ -1857,13 +1857,13 @@
     },
     {
       "Guid": "FF05FD10-E358-48CB-83ED-F38A7CCB1FA3",
-      "Name": "Rio De Janeiro",
+      "Name": "Aceros Trefilados de Precision",
       "Description": "Suspension system",
       "Location": {
-        "City": "Rio De Janeiro",
-        "Country": "Brazil",
-        "Latitude": -22.91216,
-        "Longitude": -43.17501
+        "City": "Monterrey",
+        "Country": "Mexico",
+        "Latitude": 25.818279,
+        "Longitude": -100.219898
       },
       "Image": "factory.png",
       "ProductionLines": [

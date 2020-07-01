@@ -122,7 +122,7 @@
     <comment>Error message.</comment>
   </data>
   <data name="MicrosoftAzureIoTSuite" xml:space="preserve">
-    <value>Microsoft Azure IoT Suite</value>
+    <value>Crowe IoT Suite</value>
     <comment>Section heading.</comment>
   </data>
   <data name="SignIn" xml:space="preserve">
@@ -154,7 +154,7 @@
     <comment>Informational text block. {StrContains="JavaScript"}</comment>
   </data>
   <data name="DefaultSolutionName" xml:space="preserve">
-    <value>Crowe Connected factory</value>
+    <value>Nucor Cold Finish Connected factory</value>
     <comment>Section heading.</comment>
   </data>
   <data name="AdministratorRole" xml:space="preserve">
