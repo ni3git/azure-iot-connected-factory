@@ -290,7 +290,7 @@
       "Name": "Nucor LMP, INC",
       "Description": "Fuel supply system",
       "Location": {
-        "City": "Kansas",
+        "City": "kansas",
         "Country": "United States",
         "Latitude": 40.345883,
         "Longitude": -94.849709
@@ -308,7 +308,7 @@
           },
           "Simulation": {
             "Id": "productionline0",
-            "Network": "capetown.corp.contoso",
+            "Network": "kansas.corp.contoso",
             "Mes": "Mes3221"
           },
           "Stations": [
@@ -320,11 +320,11 @@
                 "Top": 370,
                 "Left": 133
               },
-              "OpcUri": "urn:scadacp008:ua:capetown:productionline0:assemblystation",
+              "OpcUri": "urn:scadacp008:ua:kansas:productionline0:assemblystation",
               "Simulation": {
                 "Type": "Assembly",
                 "Id": "scadacp008",
-                "Path": "capetown/ProductionLine0/AssemblyStation",
+                "Path": "kansas/ProductionLine0/AssemblyStation",
                 "Args": "200 8 yes"
               },
               "Kpi1": {
@@ -403,11 +403,11 @@
                 "Top": 273,
                 "Left": 303
               },
-              "OpcUri": "urn:cptw1634:ua:capetown:productionline0:teststation",
+              "OpcUri": "urn:cptw1634:ua:kansas:productionline0:teststation",
               "Simulation": {
                 "Type": "Test",
                 "Id": "cptw1634",
-                "Path": "capetown/ProductionLine0/TestStation",
+                "Path": "kansas/ProductionLine0/TestStation",
                 "Args": "100 8 no"
               },
               "Kpi1": {
@@ -479,11 +479,11 @@
                 "Top": 390,
                 "Left": 560
               },
-              "OpcUri": "urn:scada1144:ua:capetown:productionline0:packagingstation",
+              "OpcUri": "urn:scada1144:ua:kansas:productionline0:packagingstation",
               "Simulation": {
                 "Type": "Packaging",
                 "Id": "scada1144",
-                "Path": "capetown/ProductionLine0/PackagingStation",
+                "Path": "kansas/ProductionLine0/PackagingStation",
                 "Port": "51214",
                 "Args": "100 8 no"
               },
