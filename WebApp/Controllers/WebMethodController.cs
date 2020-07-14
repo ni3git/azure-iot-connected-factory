@@ -24,8 +24,8 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.Controllers
         /// Web API to get the data for the specified topology node, view and performance.
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken(Order = 1)]
-        [RequirePermission(Permission.ViewTelemetry)]
+        //[ValidateAntiForgeryToken(Order = 1)]
+        //[RequirePermission(Permission.ViewTelemetry)]
         public string GetOeeKpiData(string key, ContosoTopologyNode.AggregationView view, ContosoPerformanceRelevance relevance)
         {
             AggregatedTimeSeriesResult timeSeries;
@@ -46,8 +46,8 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.Controllers
         /// Web API to get the data for the specified OPC UA node and view.
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken(Order = 1)]
-        [RequirePermission(Permission.ViewTelemetry)]
+        //[ValidateAntiForgeryToken(Order = 1)]
+        //[RequirePermission(Permission.ViewTelemetry)]
         public string GetDataForOpcUaNode(string key, string nodeId, ContosoTopologyNode.AggregationView view)
         {
             AggregatedTimeSeriesResult timeSeries;
@@ -89,8 +89,8 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.Controllers
         /// Web API to retrieve an URL to Azure Time Series Insights for the given topology node and view.
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken(Order = 1)]
-        [RequirePermission(Permission.ViewTelemetry)]
+        //[ValidateAntiForgeryToken(Order = 1)]
+        //[RequirePermission(Permission.ViewTelemetry)]
         public string RDXLink(string key, ContosoTopologyNode.AggregationView view)
         {
             string url = null;
@@ -129,8 +129,8 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.Controllers
         /// Web API to execute an action the user has chosen as response to an alert.
         /// </summary>
         [HttpPost]
-        [ValidateAntiForgeryToken(Order = 1)]
-        [RequirePermission(Permission.ActionAlerts)]
+        //[ValidateAntiForgeryToken(Order = 1)]
+        //[RequirePermission(Permission.ActionAlerts)]
         public string AlertActionExecute(long alertId, int alertActionId)
         {
             var jsonResponse = new List<object>();
@@ -257,7 +257,7 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.Controllers
         /// <summary>
         /// Calls a method in the specified OPC UA application.
         /// </summary>
-        [RequirePermission(Permission.ControlOpcServer)]
+        //[RequirePermission(Permission.ControlOpcServer)]
         private string CallOpcMethod(string appUri, string parentNode, string methodNode)
         {
             string result = null;

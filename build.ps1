@@ -648,7 +648,9 @@ Function GetAzureAccountInfo()
 
                 if ($script:OptionIndex -eq $accounts.length + 1)
                 {
-                    $account = Add-AzureAccount -Environment $script:AzureEnvironment.Name
+                    Write-Host ("script:AzureEnvironment.Name:" -f $script:AzureEnvironment.Name)
+                    $account = Add-AzureRmAccount -Environment $script:AzureEnvironment.Name
+                    #$account = Add-AzureRmAccount
                     break;
                 }
                 
