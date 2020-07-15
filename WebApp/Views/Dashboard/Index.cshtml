@@ -1267,6 +1267,7 @@
         });
 
         $.connection.hub.reconnecting(function () {
+            console.log("SignalR is reconnecting");
             tryingToReconnect = true;
         });
 
@@ -1283,6 +1284,7 @@
         //
         telemetry.client.updateSessionChildrenData = function (sessionUpdateJson) {
             sessionUpdate = JSON.parse(sessionUpdateJson);
+            console.log("sessionUpdateJson:"+sessionUpdate)
             if (sessionUpdate != undefined) {
                 var scrollPosition = $("#childrenListContainer").scrollTop();
                 for (i = 0; i < sessionUpdate.length; i++) {
