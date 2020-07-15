@@ -4,7 +4,7 @@
     {
       "Guid": "73B534AE-7C7E-4877-B826-F1C0EA339F65",
       "Name": "St. Louis Drawn, Inc",
-      "Description": "Braking system",
+      "Description": "Chamfering",
       "Location": {
         "City": "St. Louis",
         "Country": "United States",
@@ -16,7 +16,7 @@
         {
           "Guid": "E8260A1A-DA12-473E-9955-B220B3985356",
           "Name": "Production Line 1",
-          "Description": "Brake pads",
+          "Description": "Cole Drawing",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -29,8 +29,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Brake pad assembly station",
+              "Name": "DL20",
+              "Description": "DANIELI 20 TON",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -129,8 +129,8 @@
               ]
             },
             {
-              "Name": "Test",
-              "Description": "Brake pad test station",
+              "Name": "DL8",
+              "Description": "DANIELI 8 TON",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -205,8 +205,8 @@
               ]
             },
             {
-              "Name": "Packaging",
-              "Description": "Brake pad packaging station",
+              "Name": "KR",
+              "Description": "KIESERLING",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
