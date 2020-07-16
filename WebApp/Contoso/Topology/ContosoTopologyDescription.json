@@ -3,7 +3,7 @@
   "Factories": [
     {
       "Guid": "73B534AE-7C7E-4877-B826-F1C0EA339F65",
-      "Name": "St. Louis Drawn, Inc",
+      "Name": "St. Louis",
       "Description": "Chamfering",
       "Location": {
         "City": "St. Louis",
@@ -287,20 +287,20 @@
     },
     {
       "Guid": "CB1DBFA0-F520-46E1-85E1-97DCD67860D0",
-      "Name": "Nucor LMP, INC",
-      "Description": "Fuel supply system",
+      "Name": "South Carolina",
+      "Description": "Product 1",
       "Location": {
-        "City": "kansas",
+        "City": "Darlington",
         "Country": "United States",
-        "Latitude": 40.345883,
-        "Longitude": -94.849709
+        "Latitude": 34.378018,
+        "Longitude": -79.914338
       },
       "Image": "factory.png",
       "ProductionLines": [
         {
           "Guid": "82DEC939-540E-4519-BF7A-93FFD93DF300",
           "Name": "Production Line 1",
-          "Description": "Carburetor",
+          "Description": "Blasting",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -313,8 +313,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Carburetor assembly station",
+              "Name": "Blast",
+              "Description": "Blaster",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -396,8 +396,8 @@
               ]
             },
             {
-              "Name": "Test #1",
-              "Description": "Carburetor test station",
+              "Name": "Str",
+              "Description": "Straightener",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -472,8 +472,8 @@
               ]
             },
             {
-              "Name": "Packaging #1",
-              "Description": "Carburetor packaging station",
+              "Name": "Oltst",
+              "Description": "OFFLINE EDDY CURRENT TESTER",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
@@ -554,8 +554,8 @@
     },
     {
       "Guid": "9DEB6B9C-2358-464F-BE06-86F22E4D66B7",
-      "Name": "Nucor Cold Finish Nebraska",
-      "Description": "Exhaust system",
+      "Name": "Nebraska",
+      "Description": "Straightening",
       "Location": {
         "City": "Nebraska",
         "Country": "United States",
@@ -566,8 +566,8 @@
       "ProductionLines": [
         {
           "Guid": "D1DBB99C-9A08-4B8B-B94A-43A756A64F9D",
-          "Name": "Production Line 1",
-          "Description": "Gasket",
+          "Name": "Straightening Line",
+          "Description": "Bar",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -580,8 +580,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Gasket assembly station",
+              "Name": "BAR STRAIGHTENER",
+              "Description": "BAR STRTNR",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -663,8 +663,8 @@
               ]
             },
             {
-              "Name": "Test",
-              "Description": "Gasket test station",
+              "Name": "TURNER1 STRAIGHTENER",
+              "Description": "T1 STRTNR",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -739,8 +739,8 @@
               ]
             },
             {
-              "Name": "Packaging",
-              "Description": "Gasket packaging station",
+              "Name": "TURNER2 STRAIGHTENER",
+              "Description": "T2 STRTNR",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
@@ -821,8 +821,8 @@
     },
     {
       "Guid": "17BB3DAB-C22A-4115-8BFE-038B9A5BC04C",
-      "Name": "Nucor Cold Finish Utah",
-      "Description": "Fasteners",
+      "Name": "Utah",
+      "Description": "Coil",
       "Location": {
         "City": "Utah",
         "Country": "United States",
@@ -833,8 +833,8 @@
       "ProductionLines": [
         {
           "Guid": "103A4B41-AFAE-4B5E-BAA0-18FF3FCCCB3B",
-          "Name": "Forming Line1",
-          "Description": "Wire Processing",
+          "Name": "Production Line 1",
+          "Description": "Cold Drawing",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -847,8 +847,8 @@
           },
           "Stations": [
             {
-              "Name": "Pickling",
-              "Description": "Pickling station",
+              "Name": "Bar",
+              "Description": "Bar Line",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -930,8 +930,8 @@
               ]
             },
             {
-              "Name": "Annealing",
-              "Description": "Annealing station",
+              "Name": "Coil",
+              "Description": "Coil Line",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -1006,8 +1006,8 @@
               ]
             },
             {
-              "Name": "Coating",
-              "Description": "Coating station",
+              "Name": "Grnd",
+              "Description": "Offline Ground",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
@@ -1088,11 +1088,11 @@
     },
     {
       "Guid": "DA530CC7-AF95-45B3-9322-75E48A375A65",
-      "Name": "Nucor Cold Finish Wisconsin",
-      "Description": "Air conditioning system",
+      "Name": "Wisconsin",
+      "Description": "Saw",
       "Location": {
         "City": "Wisconsin",
-        "Country": "United Stated",
+        "Country": "United States",
         "Latitude": 42.914476,
         "Longitude": -87.920231
       },
@@ -1101,7 +1101,7 @@
         {
           "Guid": "ACF8783D-DFE4-4E93-8AF0-632592B52B75",
           "Name": "Production Line 1",
-          "Description": "Condenser",
+          "Description": "Cold drawing",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 260,
@@ -1114,8 +1114,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Condenser bearing assembly station",
+              "Name": "Draw2",
+              "Description": "DRAW LINE 2",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -1197,8 +1197,8 @@
               ]
             },
             {
-              "Name": "Test #1",
-              "Description": "Condenser bearing test station",
+              "Name": "Draw3",
+              "Description": "Draw Line 3",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -1273,8 +1273,8 @@
               ]
             },
             {
-              "Name": "Packaging #1",
-              "Description": "Condenser bearing packaging station",
+              "Name": "Draw4",
+              "Description": "Draw Line 4",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,
@@ -1354,7 +1354,7 @@
         {
           "Guid": "C51003AC-3DAE-4B60-A7BC-6E6A45782B9D",
           "Name": "Production Line 2",
-          "Description": "Compressor",
+          "Description": "Saw cutting",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -1367,8 +1367,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Compressor assembly station",
+              "Name": "Saw",
+              "Description": "Offline saw",
               "Image": "assembly_station.png",
               "OpcUri": "urn:beijing201:ua:beijing:pl2:assembly",
               "Simulation": {
@@ -1857,20 +1857,20 @@
     },
     {
       "Guid": "FF05FD10-E358-48CB-83ED-F38A7CCB1FA3",
-      "Name": "Aceros Trefilados de Precision",
-      "Description": "Suspension system",
+      "Name": "Utah (Wire Products)",
+      "Description": "Product 3",
       "Location": {
-        "City": "Monterrey",
-        "Country": "Mexico",
-        "Latitude": 25.818279,
-        "Longitude": -100.219898
+        "City": "Utah",
+        "Country": "Unites States",
+        "Latitude": 41.536034,
+        "Longitude": -112.061543
       },
       "Image": "factory.png",
       "ProductionLines": [
         {
           "Guid": "BF1644C7-30CF-4581-BE59-43992C681756",
           "Name": "Production Line 1",
-          "Description": "Beam axle",
+          "Description": "Rolling",
           "Image": "factory_floor.gif",
           "ImagePushpin": {
             "Top": 290,
@@ -1883,8 +1883,8 @@
           },
           "Stations": [
             {
-              "Name": "Assembly",
-              "Description": "Beam axle assembly station",
+              "Name": "Rmv1",
+              "Description": "COLD ROLLING LINE 1",
               "Image": "assembly_station.png",
               "ImagePushpin": {
                 "Top": 370,
@@ -1966,8 +1966,8 @@
               ]
             },
             {
-              "Name": "Test #1",
-              "Description": "Beam axle test station",
+              "Name": "RMV2",
+              "Description": "COLD ROLLING LINE 2",
               "Image": "testing_station.png",
               "ImagePushpin": {
                 "Top": 273,
@@ -2042,8 +2042,8 @@
               ]
             },
             {
-              "Name": "Packaging #1",
-              "Description": "Beam axle packaging station",
+              "Name": "Rmv3",
+              "Description": "COLD ROLLING LINE 3",
               "Image": "packing_station.png",
               "ImagePushpin": {
                 "Top": 390,

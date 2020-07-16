@@ -263,7 +263,8 @@ Function ValidateLocation()
 
 Function GetResourceGroup()
 {
-    $resourceGroup = Get-AzureRmResourceGroup -Tag @{"IotSuiteType" = $script:SuiteType} | ?{$_.Name -eq $script:SuiteName}
+    #$resourceGroup = Get-AzureRmResourceGroup -Tag @{"IoTSuiteType" = $script:SuiteType} | ?{$_.Name -eq $script:SuiteName}
+    $resourceGroup = Get-AzureRmResourceGroup -Tag @{"IoTSuiteState" = "Failed"} | ?{$_.Name -eq $script:SuiteName}
     if ($resourceGroup -eq $null)
     {
         Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) No resource group found with name '{0}' and type '{1}'" -f $script:SuiteName, $script:SuiteType)
@@ -786,11 +787,16 @@ Function CreateAadClientSecret()
 {
     $newPassword = RandomPassword
     Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - New Password: {0}" -f $newPassword)
-    Remove-AzureRmADAppCredential -ApplicationId $script:AadClientId -Force -ErrorAction SilentlyContinue
+    Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - AadClientId: {0}" -f $script:AadClientId)
+    Remove-AzureRmADAppCredential -ApplicationId $script:AadClientId1 -Force -ErrorAction SilentlyContinue
     # create new secret for web app, $secret is converted to PSAD type
     # keep $newPassword to be returned as a string
     $secret = $newPassword
     $startDate = Get-Date
+    
+    Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - AadClientId2: {0}" -f $script:AadClientId)
+    Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - StartDate: {0}" -f $startDate)
+    Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - EndDate: {0}" -f $startDate.AddYears(1))
     $script:clientSecret = New-AzureRmADAppCredential -ApplicationId $script:AadClientId -StartDate $startDate -EndDate $startDate.AddYears(1) -Password (ConvertTo-SecureString -String  $secret -Force –AsPlainText)
     Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - New Secret Id: {0}" -f $script:clientSecret.KeyId)
     return $newPassword
@@ -2659,7 +2665,8 @@ else
 DetectIoTHubDNS
 
 # Initialize cloud related variables
-$script:SuiteExists = (Get-AzureRmResourceGroup -Tag @{"IotSuiteType" = $script:SuiteType} | Where-Object {$_.name -eq $script:SuiteName -or $_.ResourceGroupName -eq $script:SuiteName}) -ne $null
+#$script:SuiteExists = (Get-AzureRmResourceGroup -Tag @{"IoTSuiteType" = $script:SuiteType} | Where-Object {$_.name -eq $script:SuiteName -or $_.ResourceGroupName -eq $script:SuiteName}) -ne $null
+$script:SuiteExists = (Get-AzureRmResourceGroup -Tag @{"IoTSuiteState" = "Failed"} | Where-Object {$_.name -eq $script:SuiteName -or $_.ResourceGroupName -eq $script:SuiteName}) -ne $null
 Write-Verbose ("$(Get-Date –f $TIME_STAMP_FORMAT) - Get resource group name for suiteName '{0}' and suiteType '{1}'" -f $script:SuiteName, $script:SuiteType)
 $script:ResourceGroupName = (GetResourceGroup).ResourceGroupName
 Write-Output ("$(Get-Date –f $TIME_STAMP_FORMAT) - Resourcegroup name is '{0}'" -f $script:ResourceGroupName)
