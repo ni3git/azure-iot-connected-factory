@@ -161,6 +161,7 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp
                         {
                             if (SessionsViewingStationsCount() != 0)
                             {
+                                Trace.TraceInformation($"Inside MessageProcesso.cs SessionsViewingStationsCount: {SessionsViewingStationsCount()}");
                                 try
                                 {
                                     Trace.TraceInformation($"processorHostMessages {_processorHostMessages}, publisherMessages {_publisherMessages}/{_publisherMessagesInvalidFormat}, sourceTimestamp: '{_lastSourceTimestamp}'");

@@ -85,42 +85,57 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.RDX
                     // to create the OAuth2 bearer tokens
                     IClientAuthenticator clientAuthenticator;
                     string tenantId = ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationTenantId);
+                    //Trace.TraceInformation("*********RDX {0} tenantId:", tenantId);
                     IccString clientCertificateThumbprint = new IccString(ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationClientCertificateThumbprint));
+                    //Trace.TraceInformation("*********RDX {0} clientCertificateThumbprint:", clientCertificateThumbprint);
                     if (clientCertificateThumbprint.IsNullOrWhiteSpace())
                     {
                         string clientId = ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationClientId);
+                        //Trace.TraceInformation("*********RDX {0} ClientId:", clientId);
                         string clientSecret = ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationClientSecret);
+                        //Trace.TraceInformation("*********RDX {0} clientSecret:", clientSecret);
+
                         if (String.IsNullOrWhiteSpace(clientSecret))
                         {
                             Uri redirectUri = new Uri(ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationRedirectUri));
+                            //Trace.TraceInformation("*********RDX {0} redirectUri:", redirectUri);
                             clientAuthenticator = new UserClientAuthenticator(tenantId, clientId, redirectUri, BaseClientAuthenticator.AzureTimeSeriesResource);
+                            //Trace.TraceInformation("*********RDX {0} clientAuthenticator:", clientAuthenticator);
                         }
                         else
                         {
                             clientAuthenticator = new ClientCredentialAuthenticator(tenantId, clientId, clientSecret, BaseClientAuthenticator.AzureTimeSeriesResource);
+                            //Trace.TraceInformation("*********RDX {0} clientAuthenticator:", clientAuthenticator);
                         }
                     }
                     else
                     {
                         string applicationClientId = ConfigurationProvider.GetConfigurationSettingValue(rdxAuthenticationClientApplicationId);
+                        //Trace.TraceInformation("*********RDX {0} applicationClientId:", applicationClientId);
                         clientAuthenticator = new ApplicationCertificateClientAuthenticator(applicationClientId, clientCertificateThumbprint, tenantId, BaseClientAuthenticator.AzureTimeSeriesResource);
+                        //Trace.TraceInformation("*********RDX {0} clientAuthenticator:", clientAuthenticator);
                     }
 
                     // Create the RDX client with authenticator and DNS resolver
                     _rdxDNSName = ConfigurationProvider.GetConfigurationSettingValue(rdxDnsName);
+                    //Trace.TraceInformation("*********RDX {0} _rdxDNSName:", _rdxDNSName);
                     IccString rdxIccDnsName = new IccString("api." + _rdxDNSName);
+                    //Trace.TraceInformation("*********RDX {0} rdxIccDnsName:", rdxIccDnsName);
                     string solutionName = ConfigurationProvider.GetConfigurationSettingValue(rdxApplicationName);
+                    //Trace.TraceInformation("*********RDX {0} solutionName:", solutionName);
                     _rdxGlobalQueryClient = new RdxGlobalQueryClient(rdxIccDnsName, solutionName, clientAuthenticator);
+                    //Trace.TraceInformation("*********RDX {0} _rdxGlobalQueryClient:", _rdxGlobalQueryClient);
 
                     // Test if our environment exists and is accessible
                     _rdxEnvironmentId = new IccString(ConfigurationProvider.GetConfigurationSettingValue(rdxEnvironmentId));
+                    //Trace.TraceInformation("*********RDX {0} _rdxEnvironmentId:", _rdxEnvironmentId);
                     GetEnvironmentsOutput environments = await GetEnvironmentsAsync(CancellationToken.None);
 
-                    Trace.TraceInformation("Got {0} environments: ", environments.Environments.Count);
+                    //Trace.TraceInformation("Got {0} environments: ", environments.Environments.Count);
                     bool foundEnvironment = false;
                     foreach (var env in environments.Environments)
                     {
-                        Trace.TraceInformation("  {0} {1}", env.EnvironmentId, env.DisplayName);
+                        //Trace.TraceInformation("  {0} {1}", env.EnvironmentId, env.DisplayName);
                         if (env.EnvironmentId == _rdxEnvironmentId)
                         {
                             foundEnvironment = true;
@@ -129,7 +144,7 @@ namespace Microsoft.Azure.IoTSuite.Connectedfactory.WebApp.RDX
                             break;
                         }
                     }
-
+                    //Trace.TraceInformation("*********RDX {0} foundEnvironment: ", foundEnvironment);
                     if (!foundEnvironment)
                     {
                         throw new Exception(String.Format("RDX Environment {0} not found.", _rdxEnvironmentId.ToString()));
